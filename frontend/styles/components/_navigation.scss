@@ -1,13 +1,25 @@
 .navigation {
-    &__wrapper {
-
-    }
-
     &__list {}
 
-    &__item {}
+    &__item {
+        clear: both;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
 
     &__link {
-        &.is-current {}
+        color: #7c90a7;
+        font-family: $CorsicaLX;
+        font-size: 2.3rem;
+        font-weight: 400;
+        line-height: 1;
+        text-decoration: none;
+        letter-spacing: 0.002rem;
+
+        &.is-current {
+            color: #16212e;
+        }
     }
 }

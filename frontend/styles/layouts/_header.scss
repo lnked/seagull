@@ -6,10 +6,4 @@
     &__wrapper {
         @extend %layout;
     }
-
-    &__logo {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
 }
