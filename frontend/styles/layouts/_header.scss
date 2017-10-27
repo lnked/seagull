@@ -5,5 +5,8 @@
 
     &__wrapper {
         @extend %layout;
+
+        display: flex;
+        justify-content: space-between;
     }
 }

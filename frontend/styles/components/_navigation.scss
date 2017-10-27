@@ -1,5 +1,10 @@
 .navigation {
-    &__list {}
+    clear: both;
+    margin-bottom: 50px;
+
+    &__list {
+        clear: both;
+    }
 
     &__item {
         clear: both;
@@ -11,7 +16,6 @@
 
     &__link {
         color: #7c90a7;
-        font-family: $CorsicaLX;
         font-size: 2.3rem;
         font-weight: 400;
         line-height: 1;
