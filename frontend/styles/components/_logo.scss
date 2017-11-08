@@ -1,13 +1,26 @@
 .logo {
-    color: #7c9fbc;
+    width: 190px;
     font-size: 0;
+    line-height: 1;
     display: block;
     user-select: none;
+    margin-left: -22px;
+    text-align: left;
+    position: relative;
+    background: url(/images/logo.svg) 50% 50% no-repeat;
+
+    &:before {
+        width: 100%;
+        content: "";
+        display: block;
+        padding-bottom: 85.555555556%;
+    }
 
     &__src {
+        position: absolute 0;
         max-width: 100%;
         height: auto;
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: top;
     }
 }

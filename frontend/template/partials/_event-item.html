@@ -1,0 +1,35 @@
+<article class="event-item list__item" itemscope itemtype="http://schema.org/Event" data-url="#">
+    <meta itemprop="startDate" content="2013-09-14T21:30">
+
+    <a href="#" itemprop="url" class="event-item__image">
+        <figure class="event-item__image__layout" itemscope itemtype="http://schema.org/ImageObject">
+            <img src="{{ item.image }}" class="event-item__image__src" itemprop="contentUrl" alt="">
+        </figure>
+    </a>
+
+    <div class="event-item__place" itemprop="location" itemscope itemtype="http://schema.org/Place">
+        <meta itemprop="name" content="{{ place.name }}">
+
+        <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <meta itemprop="streetAddress" content="{{ place.address }}">
+            <meta itemprop="addressLocality" content="{{ place.locality }}">
+            <meta itemprop="telephone" content="{{ place.telephone }}">
+        </div>
+    </div>
+
+    <div class="event-item__content">
+        <div class="event-item__date">
+            <div class="event-item__date__day">{{ item.day }}</div>
+            <div class="event-item__date__month">{{ item.month }}</div>
+        </div>
+
+        <div class="event-item__title" itemprop="name">{{ item.name }}</div>
+
+        <footer class="event-item__footer">
+            <button type="button" data-events="{{ item.id }}" class="event-item__button j-events-popup">
+                Забронировать стол
+            </button>
+        </footer>
+    </div>
+
+</article>

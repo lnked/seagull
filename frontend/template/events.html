@@ -1,0 +1,106 @@
+---
+title: Анонсы
+current: events
+place:
+    name: Бар «БОЛЬШАЯ РЫБА»
+    address: МКР «Панорама» ул. Жлобы, 137
+    locality: г. Краснодар
+    telephone: +7 (989) 811-16-16
+items:
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons-2.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - day: 29
+    month: сентября
+    image: /images/anons-3.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons-4.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/anons.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+---
+{% extends "layouts/_base.html" %}
+
+{% block content %}
+
+    <div class="list">
+
+        {% for item in items %}
+            {% include "./partials/_event-item.html" %}
+        {% endfor %}
+
+    </div>
+
+    <div class="list__center">
+        <button class="button events__button" type="button">ПОКАЗАТЬ ЕЩЕ</button>
+    </div>
+
+{% endblock %}

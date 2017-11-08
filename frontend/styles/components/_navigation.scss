@@ -1,6 +1,7 @@
 .navigation {
     clear: both;
     margin-bottom: 50px;
+    border: 1px solid lime;
 
     &__list {
         clear: both;
@@ -19,8 +20,15 @@
         font-size: 2.3rem;
         font-weight: 400;
         line-height: 1;
+        padding-left: 15px;
         text-decoration: none;
         letter-spacing: 0.002rem;
+
+        @include outline(#fff, 1px, false, true);
+
+        &:hover {
+
+        }
 
         &.is-current {
             color: #16212e;

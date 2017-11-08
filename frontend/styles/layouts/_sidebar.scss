@@ -1,5 +1,14 @@
 .sidebar {
     float: left;
+    border: 1px solid red;
+    position: relative;
+    z-index: 100;
     width: $sidebar-width;
     margin-right: -$sidebar-width;
+
+    &__button {
+        border: 1px solid red;
+        width: 100%;
+        margin-bottom: 40px;
+    }
 }

@@ -1,32 +1,60 @@
 ---
-title: Главная
+title: Фотогаллерея
 current: photoreports
 description: Главная
 keywords: Главная
+items:
+  - id: 10
+    large: true
+    day: 30
+    month: сентября
+    image: /images/gallery-0.jpg
+    name: РЕАЛ МАДРИД - АТЛЕТИКО М.
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/gallery-1.jpg
+    name: "Школа Мясоедов в Корове: новый сезон!"
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/gallery-2.jpg
+    name: "Школа Мясоедов в Корове: новый сезон!"
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/gallery-3.jpg
+    name: "Школа Мясоедов в Корове: новый сезон!"
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/gallery-4.jpg
+    name: "Школа Мясоедов в Корове: новый сезон!"
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/gallery-5.jpg
+    name: "Школа Мясоедов в Корове: новый сезон!"
+  - id: 10
+    day: 30
+    month: сентября
+    image: /images/gallery-6.jpg
+    name: "Школа Мясоедов в Корове: новый сезон!"
 ---
-{% include "./components/_meta.html" %}
+{% extends "layouts/_base.html" %}
 
-{% include "./components/_svgstore.html" %}
+{% block content %}
 
-<div class="layout-wrapper">
+    <div class="list">
 
-    {% include "./components/_header.html" %}
-
-    <div class="layout-wrapper__pusher">
-
-        <div class="layout-wrapper__container clearfix">
-
-            {% include "./components/_sidebar.html" %}
-
-            <div class="content clearfix">
-
-            </div>
-
-        </div>
+        {% for item in items %}
+            {% include "./partials/_gallery-item.html" %}
+        {% endfor %}
 
     </div>
 
-</div>
+    <div class="list__center">
+        <button class="button events__button" type="button">ПОКАЗАТЬ ЕЩЕ</button>
+    </div>
 
-{% include "./components/_footer.html" %}
-{% include "./components/_scripts.html" %}
+{% endblock %}

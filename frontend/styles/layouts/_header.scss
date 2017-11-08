@@ -5,8 +5,32 @@
 
     &__wrapper {
         @extend %layout;
-
         display: flex;
+        align-items: stretch;
         justify-content: space-between;
+    }
+
+    &__sidebar {
+        width: $sidebar-width;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__content {
+        flex-grow: 1;
+        padding-top: 40px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    &__info {
+        text-align: left;
+        margin-right: 60px;
+    }
+
+    &__address {
+        margin-right: 140px;
     }
 }

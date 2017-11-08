@@ -1,0 +1,25 @@
+<article class="gallery-item list__item{% if item.large %} gallery-item--double list__item--double{% endif %}" itemscope itemtype="http://schema.org/Event" data-url="#">
+    <meta itemprop="startDate" content="2013-09-14T21:30">
+
+    <a href="#" itemprop="url" class="gallery-item__image">
+        <figure class="gallery-item__image__layout" itemscope itemtype="http://schema.org/ImageObject">
+            <img src="{{ item.image }}" class="gallery-item__image__src" itemprop="contentUrl" alt="">
+        </figure>
+    </a>
+
+    <div class="gallery-item__content">
+        <div class="gallery-item__date">
+            <div class="gallery-item__date__day">{{ item.day }}</div>
+            <div class="gallery-item__date__month">{{ item.month }}</div>
+        </div>
+
+        <div class="gallery-item__title" itemprop="name">{{ item.name }}</div>
+
+        <footer class="gallery-item__footer">
+            <button type="button" data-events="{{ item.id }}" class="gallery-item__button j-events-popup">
+                ПОДРОБНЕЕ
+            </button>
+        </footer>
+    </div>
+
+</article>

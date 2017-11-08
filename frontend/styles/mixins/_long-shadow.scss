@@ -13,10 +13,6 @@
 
         $gradient_steps: append(#{$gradient_steps}, #{$i}px #{$i}px $colour_mix $separator);
     }
-    
+
     @return $gradient_steps;
 }
-
-// .selector {
-//     text-shadow: longShadow(darken($color, 15%), $color, 100, 0.8);
-// }

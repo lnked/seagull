@@ -1,4 +1,10 @@
 .phone {
+    clear: both;
+    background: url(/images/phone.svg) 0 50% no-repeat;
+    background-size: 13px 13px;
+    padding-left: 22px;
+    margin-left: -22px;
+    margin-bottom: 20px;
 
     &__link {
         color: #7d8eaa;
@@ -7,5 +13,6 @@
         line-height: 1.67;
         letter-spacing: 0.001rem;
         text-decoration: none;
+        font-family: $font-arial;
     }
 }

@@ -2,29 +2,10 @@
 title: Меню
 current: menu
 ---
-{% include "./components/_meta.html" %}
+{% extends "layouts/_base.html" %}
 
-{% include "./components/_svgstore.html" %}
+{% block content %}
 
-<div class="layout-wrapper">
+    <h1>Меню</h1>
 
-    {% include "./components/_header.html" %}
-
-    <div class="layout-wrapper__pusher">
-
-        <div class="layout-wrapper__container clearfix">
-
-            {% include "./components/_sidebar.html" %}
-
-            <div class="content clearfix">
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-{% include "./components/_footer.html" %}
-{% include "./components/_scripts.html" %}
+{% endblock %}
