@@ -1,0 +1,117 @@
+.slider {
+    font-size: 0;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        left: 0;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 13rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-top: -40px;
+        margin-bottom: 50px;
+        letter-spacing: 0.05ex;
+        font-family: $font-family;
+    }
+
+    &__button {
+        clear: both;
+
+        &__link {
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 6rem;
+            text-align: center;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.28rem;
+            background-color: rgba(#7f9bb3, 0.52);
+            transition: background-color $a-micro-time $a-func;
+
+            &, &:before {
+                width: 31rem;
+                height: 6rem;
+                display: block;
+            }
+
+            &:before {
+                content: "";
+                border: 2px solid #fff;
+                position: absolute 0;
+                transform: translate3d(4px, -6px, 0);
+                transition: transform $a-micro-time $a-func;
+            }
+
+            &:hover {
+                background-color: rgba(#7f9bb3, 0.8);
+
+                &:before {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        bottom: 0;
+        right: 5px;
+
+        &__point {
+            @extend %button;
+            width: 16px;
+            height: 16px;
+            border: 0;
+            padding: 0;
+            display: block;
+            font-size: 0;
+            border-radius: 50%;
+            overflow: hidden;
+            background: none;
+            position: relative;
+            margin-bottom: 25px;
+            @include outline($c-focus-color, 2px, true, false);
+
+            &:before {
+                content: "";
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                display: inline-block;
+                background-color: #fff;
+                transition: background-color $a-micro-time $a-func;
+            }
+
+            &:hover,
+            &.is-current {
+                &:before {
+                    background-color: #7c9fbc;
+                }
+            }
+        }
+    }
+
+    &__item {
+        padding-left: 210px;
+        padding-right: 60px;
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
+
+    &__image {
+        width: 100%;
+
+        &__src {
+            max-width: 100%;
+        }
+    }
+}

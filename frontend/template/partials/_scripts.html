@@ -1,0 +1,11 @@
+<script src="/js/vendors.min.js"></script>
+<script src="/js/libs.min.js"></script>
+<script src="/js/app.min.js"></script>
+
+{% if ymap %}
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9CgiWdZfubdl_Sqb9fVgZie_qlXEi0ew&callback=app.google.draw" type="text/javascript"></script>
+{% endif %}
+
+{% if gmap %}
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=yandexMap" async></script>
+{% endif %}

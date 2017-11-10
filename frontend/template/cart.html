@@ -1,0 +1,54 @@
+---
+title: Корзина
+current: cart
+---
+{% extends "layouts/_base.html" %}
+
+{% block content %}
+
+    <h1>Корзина</h1>
+    <h2>укажите адрес доставки</h2>
+
+    <div class="cart">
+        <div class="cart__item">
+            <div class="cart__item__image">
+                <img src="/images/cart-item.jpg" alt="" class="cart__item__image__src">
+            </div>
+
+            <div class="cart__item__group">
+                <div class="cart__item__name">Овощное рагу с мясом кролика</div>
+                <div class="cart__item__description">свиные ребра по особому рецепту</div>
+            </div>
+
+            <div class="cart__item__count">
+                {% include "components/_quantity.html" %}
+            </div>
+
+            <div class="cart__item__cost">
+                <span class="cart__item__cost__price">620</span> р
+            </div>
+
+            <div class="cart__item__total">
+                <span class="cart__item__total__price">1 240</span> р
+            </div>
+        </div>
+    </div>
+
+    <div class="steps">
+        <ol class="steps__list">
+            <li class="steps__item is-passed">
+                <a href="" class="steps__item__name">ваш заказ</a>
+            </li>
+            <li class="steps__item is-passed">
+                <a href="" class="steps__item__name">адрес доставки</a>
+            </li>
+            <li class="steps__item">
+                <a href="" class="steps__item__name">оплата</a>
+            </li>
+            <li class="steps__item">
+                <a href="" class="steps__item__name">подтверждение</a>
+            </li>
+        </ol>
+    </div>
+
+{% endblock %}

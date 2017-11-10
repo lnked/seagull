@@ -10,15 +10,8 @@
         justify-content: space-between;
     }
 
-    &__sidebar {
-        width: $sidebar-width;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-
     &__content {
-        flex-grow: 1;
+        width: 100%;
         padding-top: 40px;
         display: flex;
         align-items: flex-start;

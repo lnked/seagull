@@ -91,8 +91,8 @@ module.exports.tasks = {
     },
 
     'favicon': {
-        src: src + 'favicon/**/*.*',
-        app: app + 'favicon'
+        src: src + 'favicons/**/*.*',
+        app: app + 'favicons'
     },
 
     'svgstore': {
@@ -170,7 +170,7 @@ module.exports.tasks = {
             video:      [src + 'video/**/*.*'],
             files:      [src + 'files/**/*.*'],
             images:     [src + 'images/**/*.*'],
-            favicon:    [src + 'favicon/**/*.*'],
+            favicon:    [src + 'favicons/**/*.*'],
             fonts:      [src + 'fonts/**/*.*'],
             misc:       [src + 'misc/**/*.*'],
             json:       [src + 'json/**/*.json'],

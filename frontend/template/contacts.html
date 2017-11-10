@@ -6,6 +6,72 @@ current: contacts
 
 {% block content %}
 
-    <!-- contend -->
+    <div class="contacts">
+        <div class="contacts__map">
+            {# <img src="/images/blue-marker.png" alt=""> #}
+            <img src="/images/map.jpg" width="100%" alt="">
+        </div>
+
+        <div class="contacts__row">
+            <div class="contacts__item contacts__item--marker">
+                г. Ростов-на-Дону<br>
+                прт. Коммунистический, 36/4
+            </div>
+
+            <div class="contacts__item contacts__item--phone">
+                Тел: <a href="tel:8-898-811-16-16" title="">8 (898) 811-16-16</a><br>
+                Моб: <a href="tel:8-898-811-16-16" title="">8 (898) 811-16-16</a>
+            </div>
+
+            <div class="contacts__item contacts__item--clock">
+                c ПН по ПТ: 09:00 – 22:00<br>
+                суббота: 11:00 – 02:00<br>
+                воскресенье: закрыто
+            </div>
+        </div>
+
+        <form class="contacts__feedback feedback">
+            <div class="feedback__title">ОБРАТНАЯ СВЯЗЬ</div>
+            <div class="feedback__require">* обязательно для заполнения</div>
+
+            <label class="feedback__input">
+                <span class="feedback__input__title">Представьтесь <span class="feedback__input__title__star">*</span></span>
+                <input class="feedback__input__field" title="*представьтесь">
+                <div class="feedback__input__danger">Не заполнено поле</div>
+            </label>
+
+            <label class="feedback__input">
+                <span class="feedback__input__title">Тема сообщения</span>
+                <input class="feedback__input__field" title="Тема сообщения">
+            </label>
+
+            <div class="feedback__row">
+                <div class="feedback__col">
+                    <label class="feedback__input">
+                        <span class="feedback__input__title">Электронная почта <span class="feedback__input__title__star">*</span></span>
+                        <input class="feedback__input__field" title="Электронная почта">
+                        <div class="feedback__input__danger">Неправильный формат электронной почты</div>
+                    </label>
+                </div>
+
+                <div class="feedback__col">
+                    <label class="feedback__input">
+                        <span class="feedback__input__title">Номер телефона</span>
+                        <input class="feedback__input__field mask-phone" title="Номер телефона">
+                        <div class="feedback__input__danger">Неправильный формат номера телефона</div>
+                    </label>
+                </div>
+            </div>
+
+            <label class="feedback__input">
+                <span class="feedback__input__title">Текст сообщения <span class="feedback__input__title__star">*</span></span>
+                <textarea class="feedback__input__field feedback__input__field--text" title="Текст сообщения"></textarea>
+            </label>
+
+            <div class="feedback__button">
+                <button type="submit" class="button">ОТПРАВИТЬ</button>
+            </div>
+        </form>
+    </div>
 
 {% endblock %}

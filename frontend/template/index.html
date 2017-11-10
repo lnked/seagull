@@ -6,6 +6,27 @@ current: index
 
 {% block content %}
 
-    <img src="/images/slide.jpg" alt="">
+    <div class="slider">
+        <div class="slider__item is-active">
+            <div class="slider__content">
+                <div class="slider__title">тут<br>вкусно</div>
+
+                <div class="slider__button">
+                    <a href="/menu.html" class="slider__button__link">посмтреть меню</a>
+                </div>
+            </div>
+
+            <div class="slider__image">
+                <img src="/images/slide.jpg" class="slider__image__src" alt="">
+            </div>
+        </div>
+
+        <div class="slider__nav">
+            <button type="button" class="slider__nav__point is-current">1</button>
+            <button type="button" class="slider__nav__point">2</button>
+            <button type="button" class="slider__nav__point">3</button>
+            <button type="button" class="slider__nav__point">4</button>
+        </div>
+    </div>
 
 {% endblock %}

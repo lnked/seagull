@@ -23,11 +23,12 @@
         padding-left: 15px;
         text-decoration: none;
         letter-spacing: 0.002rem;
+        transition: color $a-micro-time ease;
 
-        @include outline(#fff, 1px, false, true);
+        &:hover {}
 
-        &:hover {
-
+        &:focus {
+            color: $c-blue;
         }
 
         &.is-current {

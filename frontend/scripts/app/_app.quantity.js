@@ -3,29 +3,32 @@ const app = app || {};
 ((body => {
     'use strict';
 
-    let _this_;
-
     app.quantity = {
 
         config: {
             element: '.j-quantity',
             input: '.j-quantity-count',
             control: '.j-quantity-control',
-            complete: null
+            complete: null,
+            afterClick: null
         },
 
         element: null,
 
-        setValue(quantity) {
+        getValue: function() {
+            return parseInt(this.element.find(this.config.input).val(), 10);
+        },
+
+        setValue: function(quantity) {
             let min = 1;
             let max = 100;
 
             if (this.element.data('min')) {
-                min = this.element.data('min');   
+                min = this.element.data('min');
             }
 
             if (this.element.data('max')) {
-                max = this.element.data('max');   
+                max = this.element.data('max');
             }
 
             if (quantity > max) {
@@ -39,13 +42,13 @@ const app = app || {};
             this.element.find(this.config.input).val(quantity);
         },
 
-        increase(quantity) {
+        increase: function(quantity) {
             quantity += 1;
 
             this.setValue(quantity);
         },
 
-        decrease(quantity) {
+        decrease: function(quantity) {
             if (quantity > 1) {
                 quantity -= 1;
             }
@@ -53,16 +56,29 @@ const app = app || {};
             this.setValue(quantity);
         },
 
-        callback() {
-            if (typeof (this.element.data('product')) !== 'undefined' && typeof (this.config.complete) == 'function')
+        afterClick: function($control) {
+            if (typeof (this.config.afterClick) == 'function')
             {
-                this.config.complete.call(null, this.element, this.element.data('product'));
+                this.config.afterClick.call(null, $control);
             }
         },
 
-        keys() {
-            const _this = this;
+        callback: function() {
+            if (typeof (this.element.data('product')) !== 'undefined' && typeof (this.config.complete) == 'function')
+            {
+                this.config.complete.call(null, this.element, this.element.data('product'), this.getValue());
+            }
+        },
+
+        keys: function() {
+            const _this_ = this;
             let role = '';
+
+            $('body').on('keydown', _this_.config.input, function(e) {
+                if ([0, 8, 13, 38, 40].indexOf( e.which ) < 0 && (e.which < 48 || e.which > 57)) {
+                    return !1;
+                }
+            });
 
             $('body').on('keydown', _this_.config.input, function(e) {
                 if ([38, 40].includes(e.keyCode))
@@ -76,7 +92,7 @@ const app = app || {};
 
                     _this_.element = $(this).closest(_this_.config.element);
 
-                    _this[role[e.keyCode]](parseInt(_this_.element.find(_this_.config.input).val()));
+                    _this_[role[e.keyCode]](parseInt(_this_.element.find(_this_.config.input).val()));
 
                     _this_.callback();
 
@@ -85,19 +101,22 @@ const app = app || {};
             });
         },
 
-        bind() {
+        bind: function() {
             let role = '';
+            const _this_ = this;
 
             $('body').on('click', _this_.config.control, function(e) {
                 e.preventDefault();
 
+                _this_.afterClick($(this).closest('.j-quantity'));
+
                 _this_.element = $(this).closest(_this_.config.element);
 
                 role = $(this).data('role');
-         
+
                 if(['increase', 'decrease'].includes(role))
                 {
-                    _this[role](parseInt(_this_.element.find(_this_.config.input).val()));
+                    _this_[role](parseInt(_this_.element.find(_this_.config.input).val()));
                 }
 
                 _this_.callback();
@@ -106,14 +125,14 @@ const app = app || {};
             });
         },
 
-        init(config) {
-            _this_ = this;
+        make: function(config) {
+            const _this_ = this;
 
             if (typeof config !== 'undefined')
             {
                 _this_.config = app._extend(_this_.config, config);
             }
-            
+
             _this_.bind();
             _this_.keys();
         }
@@ -121,13 +140,21 @@ const app = app || {};
     };
 }))(document.body);
 
-// this.quantity.init({
-//     complete: function(element, id) {
-//         // $(element).css({
-//         //     'border': '1px solid lime'
-//         // });
+// app.quantity.make({
+//     afterClick: function($element) {
+//         $element.addClass('is-disabled');
+//     },
+//     complete: function($element, id, count) {
+//         $element.removeClass('is-disabled');
 
-//         console.log("id :", id);
+//         const $product = $element.closest('.j-product');
+//         const $amount = $product.find('.j-product-amount');
+
+//         $amount.html(currency($amount.data('price') * count));
+
+//         _this_.calculate();
+
+//         console.log("id :", id, $amount.data('price'), count);
 //     }
 // });
 

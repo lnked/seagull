@@ -1,11 +1,101 @@
 ---
 title: Меню
 current: menu
+catalog:
+  - name: ОСНОВНЫЕ КУШАНЬЯ
+    items:
+      - id: 10
+        name: ЦЫПЛЁНОК ТАБАКА
+        price: 620
+        description: мякоть барашка, сетка, овощи, травы, специи, лаваш, зелень, сыр, копчености
+      - id: 10
+        name: ЛЮЛЯ ИЗ МОЛОДОГО БАРАШКА ПО-НАШЕМУ
+        price: 620
+        description: мякоть барашка, сетка, овощи, травы, специи, лаваш, зелень, сыр, копчености
+      - id: 10
+        name: КОТЛЕТА ИЗ ДОНСКОЙ ЩУКИ
+        price: 620
+        description: с овощной подливкой
+      - id: 10
+        name: БЕФСТРОГАНОВ ИЗ ТЕЛЯЧЬЕЙ ВЫРЕЗКИ с воздушными клецками
+        price: 620
+        description: с овощной подливкой
+      - id: 10
+        name: ЖАРКОЕ ПО-ДОМАШНЕМУ
+        price: 620
+        description: из свинины или говядины
+  - name: БЛЮДА НА ОГНЕ
+    items:
+      - id: 10
+        name: ЦЫПЛЁНОК ТАБАКА
+        price: 620
+        description: мякоть барашка, сетка, овощи, травы, специи, лаваш, зелень, сыр, копчености
+      - id: 10
+        name: ЛЮЛЯ ИЗ МОЛОДОГО БАРАШКА ПО-НАШЕМУ
+        price: 620
+        description: мякоть барашка, сетка, овощи, травы, специи, лаваш, зелень, сыр, копчености
+      - id: 10
+        name: КОТЛЕТА ИЗ ДОНСКОЙ ЩУКИ
+        price: 620
+        description: с овощной подливкой
+      - id: 10
+        name: БЕФСТРОГАНОВ ИЗ ТЕЛЯЧЬЕЙ ВЫРЕЗКИ с воздушными клецками
+        price: 620
+        description: с овощной подливкой
+      - id: 10
+        name: ЖАРКОЕ ПО-ДОМАШНЕМУ
+        price: 620
+        description: из свинины или говядины
+  - name: САЛАТЫ
+    items:
+      - id: 10
+        name: ЦЫПЛЁНОК ТАБАКА
+        price: 620
+        description: мякоть барашка, сетка, овощи, травы, специи, лаваш, зелень, сыр, копчености
+      - id: 10
+        name: ЛЮЛЯ ИЗ МОЛОДОГО БАРАШКА ПО-НАШЕМУ
+        price: 620
+        description: мякоть барашка, сетка, овощи, травы, специи, лаваш, зелень, сыр, копчености
+      - id: 10
+        name: КОТЛЕТА ИЗ ДОНСКОЙ ЩУКИ
+        price: 620
+        description: с овощной подливкой
+      - id: 10
+        name: БЕФСТРОГАНОВ ИЗ ТЕЛЯЧЬЕЙ ВЫРЕЗКИ с воздушными клецками
+        price: 620
+        description: с овощной подливкой
+      - id: 10
+        name: ЖАРКОЕ ПО-ДОМАШНЕМУ
+        price: 620
+        description: из свинины или говядины
 ---
 {% extends "layouts/_base.html" %}
 
 {% block content %}
 
     <h1>Меню</h1>
+
+    <div class="catalog">
+        {% for category in catalog %}
+        <div class="catalog__category">
+            <div class="catalog__category__name">{{ category.name }}</div>
+
+            <div class="catalog__category__list">
+                {% for product in category.items %}
+                <div class="catalog__category__product product">
+                    <div class="product__group">
+                        <div class="product__name">{{ product.name }}</div>
+                        <div class="product__description">{{ product.description }}</div>
+                    </div>
+
+                    <div class="product__price">{{ product.price }} р</div>
+
+                    <button type="button" class="product__button">в корзину</button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}

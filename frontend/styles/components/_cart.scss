@@ -1,0 +1,26 @@
+.cart {
+    border: 1px solid red;
+
+    &__item {
+        &__image {
+            &__src {}
+        }
+
+        &__group {
+            &__name {}
+            &__description {}
+        }
+
+        &__count {
+
+        }
+
+        &__cost {
+            &__price {}
+        }
+
+        &__total {
+            &__price {}
+        }
+    }
+}

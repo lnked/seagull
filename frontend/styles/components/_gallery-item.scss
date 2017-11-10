@@ -15,6 +15,7 @@ $gallery-padding: 15px;
         width: 100%;
         outline: 0;
         display: block;
+        user-select: none;
 
         &__layout {
             font-size: 0;
