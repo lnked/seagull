@@ -12,5 +12,6 @@ $footer-offset: $footer-height + $footer-margin;
 
     &__container {
         @extend %layout;
+        padding-bottom: 30px;
     }
 }

@@ -24,13 +24,7 @@ body {
     min-width: 320px;
     line-height: 1.42857143;
     font-kerning: none;
-    overflow-x: hidden;
-    overflow-y: auto;
     background-color: $c-body-background;
-}
-
-/*
-body {
     overflow-y: scroll;
     overflow-x: hidden;
     overflow-y: -moz-scrollbars-none;
@@ -40,7 +34,6 @@ body {
         width: 0;
     }
 }
-*/
 
 body, input, textarea, select, button {
     font-synthesis: none;

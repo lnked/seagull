@@ -10,14 +10,82 @@ current: cart
     <h2>укажите адрес доставки</h2>
 
     <div class="cart">
+        <form action="" method="POST" class="cart__form form">
+            <div class="form__require"><span class="form__star">*</span> обязательно для заполнения</div>
+
+            <label class="form__input">
+                <span class="form__input__title">Ф.И.О. <span class="form__star">*</span></span>
+                <input class="form__input__field" title="Ф.И.О.">
+                <div class="form__input__danger">Не заполнено поле</div>
+            </label>
+
+            <div class="form__row">
+                <div class="form__col">
+                    <label class="form__input">
+                        <span class="form__input__title">Номер телефона</span>
+                        <input class="form__input__field mask-phone" title="Номер телефона">
+                        <div class="form__input__danger">Неправильный формат номера телефона</div>
+                    </label>
+                </div>
+
+                <div class="form__col">
+                    <label class="form__input">
+                        <span class="form__input__title">Электронная почта <span class="form__star">*</span></span>
+                        <input class="form__input__field" title="Электронная почта">
+                        <div class="form__input__danger">Неправильный формат электронной почты</div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <div class="form__col form__col--quarter">
+                    <label class="form__input">
+                        <span class="form__input__title">Улица <span class="form__star">*</span></span>
+                        <input class="form__input__field" title="Электронная почта">
+                        <div class="form__input__danger">Неправильный формат электронной почты</div>
+                    </label>
+                </div>
+
+                <div class="form__col form__col--quarter">
+                    <label class="form__input">
+                        <span class="form__input__title">Дом <span class="form__star">*</span></span>
+                        <input class="form__input__field" title="Электронная почта">
+                        <div class="form__input__danger">Неправильный формат электронной почты</div>
+                    </label>
+                </div>
+
+                <div class="form__col form__col--quarter">
+                    <label class="form__input">
+                        <span class="form__input__title">Подъезд</span>
+                        <input class="form__input__field" title="Электронная почта">
+                        <div class="form__input__danger">Неправильный формат электронной почты</div>
+                    </label>
+                </div>
+
+                <div class="form__col form__col--quarter">
+                    <label class="form__input">
+                        <span class="form__input__title">№ квартиры <span class="form__star">*</span></span>
+                        <input class="form__input__field" title="Электронная почта">
+                        <div class="form__input__danger">Неправильный формат электронной почты</div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form__button">
+                <button type="submit" class="button">продолжить</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="cart">
         <div class="cart__item">
             <div class="cart__item__image">
                 <img src="/images/cart-item.jpg" alt="" class="cart__item__image__src">
             </div>
 
             <div class="cart__item__group">
-                <div class="cart__item__name">Овощное рагу с мясом кролика</div>
-                <div class="cart__item__description">свиные ребра по особому рецепту</div>
+                <div class="cart__item__group__name">Овощное рагу с мясом кролика</div>
+                <div class="cart__item__group__description">свиные ребра по особому рецепту</div>
             </div>
 
             <div class="cart__item__count">
@@ -32,6 +100,88 @@ current: cart
                 <span class="cart__item__total__price">1 240</span> р
             </div>
         </div>
+
+        <div class="cart__item">
+            <div class="cart__item__image">
+                <img src="/images/cart-item.jpg" alt="" class="cart__item__image__src">
+            </div>
+
+            <div class="cart__item__group">
+                <div class="cart__item__group__name">Овощное рагу с мясом кролика</div>
+                <div class="cart__item__group__description">свиные ребра по особому рецепту</div>
+            </div>
+
+            <div class="cart__item__count">
+                {% include "components/_quantity.html" %}
+            </div>
+
+            <div class="cart__item__cost">
+                <span class="cart__item__cost__price">620</span> р
+            </div>
+
+            <div class="cart__item__total">
+                <span class="cart__item__total__price">1 240</span> р
+            </div>
+        </div>
+
+        <div class="cart__item">
+            <div class="cart__item__image">
+                <img src="/images/cart-item.jpg" alt="" class="cart__item__image__src">
+            </div>
+
+            <div class="cart__item__group">
+                <div class="cart__item__group__name">Овощное рагу с мясом кролика</div>
+                <div class="cart__item__group__description">свиные ребра по особому рецепту</div>
+            </div>
+
+            <div class="cart__item__count">
+                {% include "components/_quantity.html" %}
+            </div>
+
+            <div class="cart__item__cost">
+                <span class="cart__item__cost__price">620</span> р
+            </div>
+
+            <div class="cart__item__total">
+                <span class="cart__item__total__price">1 240</span> р
+            </div>
+        </div>
+
+        <div class="cart__item">
+            <div class="cart__item__image">
+                <img src="/images/cart-item.jpg" alt="" class="cart__item__image__src">
+            </div>
+
+            <div class="cart__item__group">
+                <div class="cart__item__group__name">Овощное рагу с мясом кролика</div>
+                <div class="cart__item__group__description">свиные ребра по особому рецепту</div>
+            </div>
+
+            <div class="cart__item__count">
+                {% include "components/_quantity.html" %}
+            </div>
+
+            <div class="cart__item__cost">
+                <span class="cart__item__cost__price">620</span> р
+            </div>
+
+            <div class="cart__item__total">
+                <span class="cart__item__total__price">1 240</span> р
+            </div>
+        </div>
+
+        <footer class="cart__footer">
+            <div class="cart__footer__total">
+                <span class="cart__footer__total__label">итого :</span>
+                <span class="cart__footer__total__price">
+                    <span class="cart__footer__total__price__amount">3100</span> р
+                </span>
+            </div>
+
+            <div class="cart__footer__button">
+                <button type="button" class="button">продолжить</button>
+            </div>
+        </footer>
     </div>
 
     <div class="steps">

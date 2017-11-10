@@ -30,45 +30,45 @@ current: contacts
             </div>
         </div>
 
-        <form class="contacts__feedback feedback">
+        <form action="" method="POST" class="contacts__feedback feedback">
             <div class="feedback__title">ОБРАТНАЯ СВЯЗЬ</div>
-            <div class="feedback__require">* обязательно для заполнения</div>
+            <div class="form__require"><span class="form__star">*</span> обязательно для заполнения</div>
 
-            <label class="feedback__input">
-                <span class="feedback__input__title">Представьтесь <span class="feedback__input__title__star">*</span></span>
-                <input class="feedback__input__field" title="*представьтесь">
-                <div class="feedback__input__danger">Не заполнено поле</div>
+            <label class="form__input">
+                <span class="form__input__title">Представьтесь <span class="form__star">*</span></span>
+                <input class="form__input__field" title="Представьтесь">
+                <div class="form__input__danger">Не заполнено поле</div>
             </label>
 
-            <label class="feedback__input">
-                <span class="feedback__input__title">Тема сообщения</span>
-                <input class="feedback__input__field" title="Тема сообщения">
+            <label class="form__input">
+                <span class="form__input__title">Тема сообщения</span>
+                <input class="form__input__field" title="Тема сообщения">
             </label>
 
-            <div class="feedback__row">
-                <div class="feedback__col">
-                    <label class="feedback__input">
-                        <span class="feedback__input__title">Электронная почта <span class="feedback__input__title__star">*</span></span>
-                        <input class="feedback__input__field" title="Электронная почта">
-                        <div class="feedback__input__danger">Неправильный формат электронной почты</div>
+            <div class="form__row">
+                <div class="form__col">
+                    <label class="form__input">
+                        <span class="form__input__title">Электронная почта <span class="form__star">*</span></span>
+                        <input class="form__input__field" title="Электронная почта">
+                        <div class="form__input__danger">Неправильный формат электронной почты</div>
                     </label>
                 </div>
 
-                <div class="feedback__col">
-                    <label class="feedback__input">
-                        <span class="feedback__input__title">Номер телефона</span>
-                        <input class="feedback__input__field mask-phone" title="Номер телефона">
-                        <div class="feedback__input__danger">Неправильный формат номера телефона</div>
+                <div class="form__col">
+                    <label class="form__input">
+                        <span class="form__input__title">Номер телефона</span>
+                        <input class="form__input__field mask-phone" title="Номер телефона">
+                        <div class="form__input__danger">Неправильный формат номера телефона</div>
                     </label>
                 </div>
             </div>
 
-            <label class="feedback__input">
-                <span class="feedback__input__title">Текст сообщения <span class="feedback__input__title__star">*</span></span>
-                <textarea class="feedback__input__field feedback__input__field--text" title="Текст сообщения"></textarea>
+            <label class="form__input">
+                <span class="form__input__title">Текст сообщения <span class="form__star">*</span></span>
+                <textarea class="form__input__field form__input__field--text" title="Текст сообщения"></textarea>
             </label>
 
-            <div class="feedback__button">
+            <div class="form__button">
                 <button type="submit" class="button">ОТПРАВИТЬ</button>
             </div>
         </form>

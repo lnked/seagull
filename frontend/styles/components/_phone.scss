@@ -1,10 +1,9 @@
 .phone {
     clear: both;
-    background: url(/images/phone.svg) 0 50% no-repeat;
-    background-size: 13px 13px;
     padding-left: 22px;
-    margin-left: -22px;
     margin-bottom: 20px;
+    background: url(/images/phone-stroke.svg) 0 5px no-repeat;
+    background-size: 13px 13px;
 
     &__link {
         color: #7d8eaa;

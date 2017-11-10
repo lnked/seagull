@@ -14,17 +14,13 @@
 
     {% include "partials/_header.html" %}
 
-    <div class="layout-wrapper__pusher">
+    <div class="layout-wrapper__container clearfix">
 
-        <div class="layout-wrapper__container clearfix">
+        {% include "partials/_sidebar.html" %}
 
-            {% include "partials/_sidebar.html" %}
+        <div class="content clearfix">
 
-            <div class="content clearfix">
-
-                {% block content %}{% endblock %}
-
-            </div>
+            {% block content %}{% endblock %}
 
         </div>
 
@@ -32,7 +28,7 @@
 
 </div>
 
-{% include "partials/_footer.html" %}
+<!-- {% include "partials/_footer.html" %} -->
 
 {% include "partials/_scripts.html" %}
 
